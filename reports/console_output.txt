@@ -1,0 +1,172 @@
+
+======================================================================
+PATENT DATA REPORT
+======================================================================
+Generated: 2026-04-20 22:17:26
+
+TOTAL PATENTS: 9,454,161
+
+======================================================================
+TOP 10 INVENTORS
+======================================================================
+                    name  patent_count
+        Shunpei Yamazaki          6787
+         Kia Silverbrook          4778
+                 Tao Luo          4490
+         Jonathan P. Ive          2947
+                Junyi Li          2881
+           Kangguo Cheng          2835
+Frederick E. Shelton, IV          2723
+              Peter Gaal          2554
+      Duncan Robert Kerr          2534
+        Bartley K. Andre          2478
+
+======================================================================
+TOP 10 COMPANIES
+======================================================================
+                                       name  patent_count
+                  SAMSUNG DISPLAY CO., LTD.        174536
+International Business Machines Corporation        164083
+                     CANON KABUSHIKI KAISHA         91331
+                     SONY GROUP CORPORATION         62911
+                            Fujitsu Limited         56343
+                   Kabushiki Kaisha Toshiba         53607
+                          Intel Corporation         53219
+                   General Electric Company         52043
+                        LG ELECTRONICS INC.         50000
+                              HITACHI, LTD.         46073
+
+======================================================================
+TOP 10 COUNTRIES
+======================================================================
+country  patent_count
+     US       5152235
+     JP       1596388
+     DE        632808
+     CN        503914
+     KR        441206
+     TW        326572
+     GB        295191
+     CA        268412
+     FR        253366
+     CH        122076
+
+======================================================================
+PATENT TRENDS (All Years)
+======================================================================
+ year  patent_count
+ 1976         70941
+ 1977         69820
+ 1978         70586
+ 1979         52484
+ 1980         66212
+ 1981         71112
+ 1982         63292
+ 1983         62019
+ 1984         72689
+ 1985         77276
+ 1986         77050
+ 1987         89591
+ 1988         84449
+ 1989        102719
+ 1990         99275
+ 1991        106891
+ 1992        107540
+ 1993        109933
+ 1994        113723
+ 1995        113954
+ 1996        121811
+ 1997        124181
+ 1998        163265
+ 1999        169252
+ 2000        176192
+ 2001        184172
+ 2002        184494
+ 2003        187104
+ 2004        181413
+ 2005        157829
+ 2006        196489
+ 2007        182978
+ 2008        185260
+ 2009        192052
+ 2010        244599
+ 2011        248101
+ 2012        277285
+ 2013        303658
+ 2014        327014
+ 2015        326969
+ 2016        334674
+ 2017        352587
+ 2018        341104
+ 2019        392618
+ 2020        390572
+ 2021        363829
+ 2022        360417
+ 2023        350093
+ 2024        373852
+ 2025        378741
+
+======================================================================
+SAMPLE JOIN QUERY (20 rows)
+======================================================================
+patent_id                                                title_preview        inventor_name                                                  company_name  year
+ 10110512                Virtual computing services deployment network Clinton B. Battersby                                                    VMware LLC  2018
+ 10110512                Virtual computing services deployment network          Eric Pulier                                                    VMware LLC  2018
+ 10110513   Multi-chassis switch having a modular center stage chassis         Satish D Deo                                        Juniper Networks, Inc.  2018
+ 10110513   Multi-chassis switch having a modular center stage chassis          Sunil Mekad                                        Juniper Networks, Inc.  2018
+ 10110514                                               Datapath cache        Teemu Koponen                                                  Nicira, Inc.  2018
+ 10110514                                               Datapath cache            Yong Wang                                                  Nicira, Inc.  2018
+ 10110514                                               Datapath cache          Xinhua Hong                                                  Nicira, Inc.  2018
+ 10110514                                               Datapath cache        Ronghua Zhang                                                  Nicira, Inc.  2018
+ 10110515      Packet scheduling using hierarchical scheduling process         Tsahi Daniel                                                  Cavium, LLC.  2018
+ 10110515      Packet scheduling using hierarchical scheduling process    Vamsi Panchagnula                                                  Cavium, LLC.  2018
+ 10110515      Packet scheduling using hierarchical scheduling process            Kegin Han                                                  Cavium, LLC.  2018
+ 10110516 Computer-readable recording medium, switch controlling appar     Yasushi Makiyama                                               Fujitsu Limited  2018
+ 10110517 System and method for open vSwitch virtual switch that suppo           Xueting Yu SHENYANG INSTITUTE OF AUTOMATION, CHINESE ACADEMY OF SCIENCES  2018
+ 10110517 System and method for open vSwitch virtual switch that suppo             Zhibo Li SHENYANG INSTITUTE OF AUTOMATION, CHINESE ACADEMY OF SCIENCES  2018
+ 10110517 System and method for open vSwitch virtual switch that suppo              Dong Li SHENYANG INSTITUTE OF AUTOMATION, CHINESE ACADEMY OF SCIENCES  2018
+ 10110517 System and method for open vSwitch virtual switch that suppo            Jindi Liu SHENYANG INSTITUTE OF AUTOMATION, CHINESE ACADEMY OF SCIENCES  2018
+ 10110517 System and method for open vSwitch virtual switch that suppo            Peng Zeng SHENYANG INSTITUTE OF AUTOMATION, CHINESE ACADEMY OF SCIENCES  2018
+ 10110517 System and method for open vSwitch virtual switch that suppo            Haibin Yu SHENYANG INSTITUTE OF AUTOMATION, CHINESE ACADEMY OF SCIENCES  2018
+ 10110518    Handling transport layer operations received out of order     Diego Crupnicoff                                    Mellanox Technologies, Ltd  2018
+ 10110518    Handling transport layer operations received out of order          Dror Bohrer                                    Mellanox Technologies, Ltd  2018
+
+======================================================================
+CTE QUERY - Top Inventor Each Year
+======================================================================
+                    name  year  patents_per_year
+                 Tao Luo  2025               763
+                 Tao Luo  2024               860
+                 Tao Luo  2023              1057
+                 Tao Luo  2022               520
+Frederick E. Shelton, IV  2021               333
+           Kangguo Cheng  2020               333
+           Kangguo Cheng  2019               363
+           Kangguo Cheng  2018               356
+           Kangguo Cheng  2017               406
+        Shunpei Yamazaki  2016               431
+
+======================================================================
+RANKING QUERY - Top 20 Inventors
+======================================================================
+                    name  patent_count  rank
+        Shunpei Yamazaki          6787     1
+         Kia Silverbrook          4778     2
+                 Tao Luo          4490     3
+         Jonathan P. Ive          2947     4
+                Junyi Li          2881     5
+           Kangguo Cheng          2835     6
+Frederick E. Shelton, IV          2723     7
+              Peter Gaal          2554     8
+      Duncan Robert Kerr          2534     9
+        Bartley K. Andre          2478    10
+      Richard P. Howarth          2402    11
+             Wanshi Chen          2342    12
+     Eugene Antony Whang          2248    13
+           Xiaoxia Zhang          2158    14
+    Peter Russell-Clarke          2012    15
+       Rico Zörkendörfer          1993    16
+             Chen-Hua Yu          1981    17
+     Lowell L. Wood, JR.          1974    18
+ Christopher J. Stringer          1918    19
+     Esmael Hejazi Dinan          1915    20

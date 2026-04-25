@@ -1,0 +1,22 @@
+# Ignore large data files
+data/raw/
+data/cleaned/
+
+# Ignore database (too large)
+database/patent_data.duckdb
+database/*.duckdb
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Streamlit cache
+.streamlit/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

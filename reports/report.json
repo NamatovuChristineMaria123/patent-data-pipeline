@@ -1,0 +1,70 @@
+{
+  "total_patents": 9454161,
+  "top_inventors": [
+    {
+      "name": "Shunpei Yamazaki",
+      "patent_count": 6787
+    },
+    {
+      "name": "Kia Silverbrook",
+      "patent_count": 4778
+    },
+    {
+      "name": "Tao Luo",
+      "patent_count": 4490
+    },
+    {
+      "name": "Jonathan P. Ive",
+      "patent_count": 2947
+    },
+    {
+      "name": "Junyi Li",
+      "patent_count": 2881
+    }
+  ],
+  "top_companies": [
+    {
+      "name": "SAMSUNG DISPLAY CO., LTD.",
+      "patent_count": 174536
+    },
+    {
+      "name": "International Business Machines Corporation",
+      "patent_count": 164083
+    },
+    {
+      "name": "CANON KABUSHIKI KAISHA",
+      "patent_count": 91331
+    },
+    {
+      "name": "SONY GROUP CORPORATION",
+      "patent_count": 62911
+    },
+    {
+      "name": "Fujitsu Limited",
+      "patent_count": 56343
+    }
+  ],
+  "top_countries": [
+    {
+      "country": "US",
+      "patent_count": 5152235
+    },
+    {
+      "country": "JP",
+      "patent_count": 1596388
+    },
+    {
+      "country": "DE",
+      "patent_count": 632808
+    },
+    {
+      "country": "CN",
+      "patent_count": 503914
+    },
+    {
+      "country": "KR",
+      "patent_count": 441206
+    }
+  ],
+  "generated_at": "2026-04-20T22:17:26.902804"
+}

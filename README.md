@@ -21,32 +21,6 @@ This project builds a complete data pipeline that collects, cleans, stores, and 
 - Creates 6 professional visualizations
 - Interactive Streamlit dashboard with filters and heatmaps
 
-## Project Structure
-
-patent-data-pipeline/
-├── data/
-│ ├── raw/ # Raw downloaded files
-│ └── cleaned/ # Cleaned CSV files
-├── scripts/
-│ ├── 00_download_data.py # Downloads data from USPTO API
-│ ├── 01_load_and_clean.py # Cleans and processes data
-│ ├── 02_duckdb_queries.py # Creates DB and runs SQL queries
-│ ├── 03_visualizations.py # Creates static charts
-│ └── 04_streamlit_dashboard.py # Interactive dashboard
-├── database/
-│ ├── patent_data.duckdb # DuckDB database
-│ └── schema.sql # Database schema
-├── reports/
-│ ├── top_inventors.csv
-│ ├── top_companies.csv
-│ ├── country_trends.csv
-│ ├── report.json
-│ ├── console_output.txt
-│ └── visuals/ # PNG chart files
-└── requirements.txt
-
-text
-
 ## Installation
 
 ### 1. Clone the repository

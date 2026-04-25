@@ -51,7 +51,7 @@ text
 
 ### 1. Clone the repository
 
-git clone https://github.com/yourusername/patent-data-pipeline.git
+git clone https://github.com/NamatovuChristineMaria123/patent-data-pipeline.git
 cd patent-data-pipeline
 
 2. Install Python dependencies

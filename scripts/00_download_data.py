@@ -1,7 +1,7 @@
 """
-Step 0: Download Patent Data from USPTO API
+Step 0: (For reproducibility) Download Patent Data from USPTO API
 This script downloads real patent data from the PatentsView API
-Run this first before any other scripts
+Run this first before any other scripts to get the raw data files needed for the pipeline
 """
 
 import requests
@@ -122,7 +122,7 @@ def create_sample_patent_data():
         })
     
     df = pd.DataFrame(sample_data)
-    print(f"      ✓ Created {len(df):,} sample patent records")
+    print(f"       Created {len(df):,} sample patent records")
     return df
 
 # Main execution
@@ -142,7 +142,7 @@ except Exception as e:
 # Save raw data
 print("\n[3/4] Saving raw data...")
 patents_df.to_csv(os.path.join(RAW_DATA_DIR, "raw_patents.csv"), index=False)
-print(f"      ✓ Saved: data/raw/raw_patents.csv")
+print(f"       Saved: data/raw/raw_patents.csv")
 
 # Create additional required files for compatibility (matching your original structure)
 print("\n[4/4] Creating additional data files...")
@@ -166,7 +166,7 @@ for i, country in enumerate(unique_countries):
 
 location_df = pd.DataFrame(location_data)
 location_df.to_csv(os.path.join(RAW_DATA_DIR, "g_location_disambiguated.tsv"), sep="\t", index=False)
-print(f"      ✓ Created: data/raw/g_location_disambiguated.tsv")
+print(f"       Created: data/raw/g_location_disambiguated.tsv")
 
 # Create inventors file
 inventors_data = patents_df[['inventor_name', 'inventor_country']].drop_duplicates().reset_index(drop=True)
@@ -176,7 +176,7 @@ inventors_data['disambig_inventor_name_last'] = inventors_data['inventor_name'].
 inventors_data['location_id'] = 'loc_00000'
 inventors_data = inventors_data[['patent_id', 'inventor_id', 'disambig_inventor_name_first', 'disambig_inventor_name_last', 'location_id']]
 inventors_data.to_csv(os.path.join(RAW_DATA_DIR, "g_inventor_disambiguated.tsv"), sep="\t", index=False)
-print(f"      ✓ Created: data/raw/g_inventor_disambiguated.tsv")
+print(f"       Created: data/raw/g_inventor_disambiguated.tsv")
 
 # Create assignee file
 assignees_data = patents_df[['assignee_name', 'assignee_country']].drop_duplicates().reset_index(drop=True)
@@ -185,12 +185,12 @@ assignees_data['disambig_assignee_organization'] = assignees_data['assignee_name
 assignees_data['location_id'] = 'loc_00000'
 assignees_data = assignees_data[['patent_id', 'assignee_id', 'disambig_assignee_organization', 'location_id']]
 assignees_data.to_csv(os.path.join(RAW_DATA_DIR, "g_assignee_disambiguated.tsv"), sep="\t", index=False)
-print(f"      ✓ Created: data/raw/g_assignee_disambiguated.tsv")
+print(f"       Created: data/raw/g_assignee_disambiguated.tsv")
 
 # Create abstract file
 abstracts_data = patents_df[['patent_id', 'abstract']].copy()
 abstracts_data.to_csv(os.path.join(RAW_DATA_DIR, "g_patent_abstract.tsv"), sep="\t", index=False)
-print(f"      ✓ Created: data/raw/g_patent_abstract.tsv")
+print(f"       Created: data/raw/g_patent_abstract.tsv")
 
 # Create patent file
 patents_for_file = patents_df[['patent_id', 'title', 'filing_date', 'year']].copy()
@@ -199,17 +199,9 @@ patents_for_file['patent_type'] = 'utility'
 patents_for_file['num_claims'] = 10
 patents_for_file['withdrawn'] = 0
 patents_for_file.to_csv(os.path.join(RAW_DATA_DIR, "g_patent.tsv"), sep="\t", index=False)
-print(f"      ✓ Created: data/raw/g_patent.tsv")
+print(f"       Created: data/raw/g_patent.tsv")
 
 
 print(" DATA DOWNLOAD/ CREATION COMPLETE!")
 
-print(f"\nFiles created in: {RAW_DATA_DIR}")
-print("  - raw_patents.csv")
-print("  - g_patent.tsv")
-print("  - g_patent_abstract.tsv")
-print("  - g_inventor_disambiguated.tsv")
-print("  - g_assignee_disambiguated.tsv")
-print("  - g_location_disambiguated.tsv")
 
-print("NEXT: Run python scripts/01_load_and_clean.py")

@@ -1,5 +1,5 @@
 """
-Data Pipeline - Load and Clean Patent Data
+Data Pipeline - Loading and Cleaning Patent Data
 This script loads all 5 TSV files, cleans them, and creates the 4 tables needed for the database.
 """
 
@@ -13,9 +13,7 @@ CLEANED_DATA_DIR = os.path.join(BASE_DIR, "data", "cleaned")
 
 os.makedirs(CLEANED_DATA_DIR, exist_ok=True)
 
-# -----------------------------------------------------------------------------
-# STEP 1: Loading location file (smallest first)
-# -----------------------------------------------------------------------------
+# Loading location file 
 print("\n[1/6] Loading location data...")
 print("      File: g_location_disambiguated.tsv")
 
@@ -31,9 +29,7 @@ print(f"      Loaded {len(location_dict):,} location records")
 del location_df
 gc.collect()
 
-# -----------------------------------------------------------------------------
-# STEP 2: Loading and processing patents
-# -----------------------------------------------------------------------------
+# Loading and processing patents
 print("\n[2/6] Loading patent data...")
 print("      File: g_patent.tsv")
 
@@ -59,9 +55,8 @@ print(f"      Patents: {len(clean_patents):,} records")
 del patents_df
 gc.collect()
 
-# -----------------------------------------------------------------------------
-# STEP 3: Loading abstracts and merge
-# -----------------------------------------------------------------------------
+
+# Loading abstracts and merge
 print("\n[3/6] Loading abstract data...")
 print("      File: g_patent_abstract.tsv")
 
@@ -84,9 +79,8 @@ gc.collect()
 clean_patents.to_csv(os.path.join(CLEANED_DATA_DIR, "clean_patents.csv"), index=False)
 print(f"      Saved: data/cleaned/clean_patents.csv")
 
-# -----------------------------------------------------------------------------
-# STEP 4: Loading and processing inventors
-# -----------------------------------------------------------------------------
+
+# Loading and processing inventors
 print("\n[4/6] Loading inventor data...")
 print("      File: g_inventor_disambiguated.tsv")
 
@@ -118,9 +112,8 @@ gc.collect()
 clean_inventors.to_csv(os.path.join(CLEANED_DATA_DIR, "clean_inventors.csv"), index=False)
 print(f"      Saved: data/cleaned/clean_inventors.csv")
 
-# -----------------------------------------------------------------------------
-# STEP 5: Loading and processing companies (assignees)
-# -----------------------------------------------------------------------------
+
+# Loading and processing companies (assignees)
 print("\n[5/6] Loading company data...")
 print("      File: g_assignee_disambiguated.tsv")
 
@@ -152,9 +145,8 @@ gc.collect()
 clean_companies.to_csv(os.path.join(CLEANED_DATA_DIR, "clean_companies.csv"), index=False)
 print(f"      Saved: data/cleaned/clean_companies.csv")
 
-# -----------------------------------------------------------------------------
-# STEP 6: Creating final relationships table
-# -----------------------------------------------------------------------------
+
+# Creating final relationships table
 print("\n[6/6] Creating relationships table...")
 
 relationships = patent_inventor.merge(patent_company, on='patent_id', how='outer')
@@ -169,14 +161,8 @@ print(f"      Saved: data/cleaned/relationships.csv")
 del patent_inventor, patent_company, relationships, location_dict, clean_patents, clean_inventors, clean_companies
 gc.collect()
 
-# -----------------------------------------------------------------------------
+
 # SUMMARY
-# -----------------------------------------------------------------------------
-print("\n" + "=" * 70)
-print("SUCCESS! All files saved to: data/cleaned/")
-print("=" * 70)
-print("\n Cleaned files created:")
-print("    1. clean_patents.csv")
-print("    2. clean_inventors.csv")
-print("    3. clean_companies.csv")
-print("    4. relationships.csv")
+
+print("SUCCESS! All cleanedfiles saved to: data/cleaned/")
+

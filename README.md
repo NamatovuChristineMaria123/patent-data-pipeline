@@ -13,7 +13,6 @@ This project builds a complete data pipeline that collects, cleans, stores, and 
 
 ## Features
 
-- Downloads real patent data from USPTO API
 - Cleans and transforms data using pandas
 - Stores data in DuckDB database (efficient columnar storage)
 - Runs 7 analytical SQL queries
@@ -25,28 +24,34 @@ This project builds a complete data pipeline that collects, cleans, stores, and 
 
 ### 1. Clone the repository
 
-```bash
+````bash
 git clone https://github.com/NamatovuChristineMaria123/patent-data-pipeline.git
 cd patent-data-pipeline
 2. Install Python dependencies
 bash
 pip install -r requirements.txt
-3. Download the data
-bash
-python scripts/00_download_data.py
-4. Clean the data
-bash
+
+## Data Download (Manual - Required for Full Results)
+
+The full dataset (9.4 million patents) must be manually downloaded from:
+https://data.uspto.gov/bulkdata/datasets/pvgpatdis
+
+Download these 5 files and place them in `data/raw/`:
+- g_patent.tsv
+- g_patent_abstract.tsv
+- g_inventor_disambiguated.tsv
+- g_assignee_disambiguated.tsv
+- g_location_disambiguated.tsv
+
+
+Then run these commands in order:
+
+```bash
 python scripts/01_load_and_clean.py
-5. Create database and run SQL queries
-bash
 python scripts/02_duckdb_queries.py
-6. Generate visualizations
-bash
 python scripts/03_visualizations.py
-7. Launch interactive dashboard
-bash
 streamlit run scripts/04_streamlit_dashboard.py
-Then open http://localhost:8501 in your browser.
+
 
 SQL Queries Implemented
 Query	Description
@@ -90,4 +95,4 @@ Plotly - Interactive visualizations
 Matplotlib/Seaborn - Static visualizations
 
 Requests - API data fetching
-```
+````

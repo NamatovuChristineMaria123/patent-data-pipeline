@@ -1,5 +1,5 @@
 """
-Step 2: DuckDB Database - Create Tables and Run SQL Queries
+Step 2: DuckDB Database - Creating Tables and Running SQL Queries
 DuckDB is space-efficient and perfect for large data analysis
 """
 
@@ -23,7 +23,7 @@ os.makedirs(DATABASE_DIR, exist_ok=True)
 DB_PATH = os.path.join(DATABASE_DIR, "patent_data.duckdb")
 
 print("=" * 70)
-print("STEP 2: DUCKDB DATABASE - CREATING TABLES AND RUNNING QUERIES")
+print("DUCKDB DATABASE - CREATING TABLES AND RUNNING QUERIES")
 print("=" * 70)
 print(f"\nProject Directory: {BASE_DIR}")
 print(f"Database Location: {DB_PATH}")
@@ -33,9 +33,7 @@ print(f"Reports Location: {REPORTS_DIR}")
 print("\n[1/7] Connecting to DuckDB database...")
 conn = duckdb.connect(DB_PATH)
 
-# -----------------------------------------------------------------------------
 # Creating tables and loading data from CSV files
-# -----------------------------------------------------------------------------
 print("\n[2/7] Creating tables and loading data...")
 print("      This may take a few minutes...")
 
@@ -68,7 +66,7 @@ FROM read_csv_auto(
 )
 """)
 patent_count = conn.execute("SELECT COUNT(*) FROM patents").fetchone()[0]
-print(f"      ✓ Patents loaded: {patent_count:,}")
+print(f"       Patents loaded: {patent_count:,}")
 
 # Create inventors table
 print("      Loading inventors...")
@@ -124,9 +122,8 @@ print(f"       Relationships loaded: {rel_count:,}")
 
 print("\n       All tables created successfully!")
 
-# -----------------------------------------------------------------------------
+
 # Creating indexes for better performance
-# -----------------------------------------------------------------------------
 print("\n[3/7] Creating indexes...")
 conn.execute("CREATE INDEX IF NOT EXISTS idx_patents_year ON patents(year)")
 conn.execute("CREATE INDEX IF NOT EXISTS idx_relationships_patent ON relationships(patent_id)")
@@ -134,9 +131,8 @@ conn.execute("CREATE INDEX IF NOT EXISTS idx_relationships_inventor ON relations
 conn.execute("CREATE INDEX IF NOT EXISTS idx_relationships_company ON relationships(company_id)")
 print("       Indexes created")
 
-# -----------------------------------------------------------------------------
+
 # RUNNING ALL 7 SQL QUERIES
-# -----------------------------------------------------------------------------
 print("\n[4/7] Running SQL queries...")
 
 # Q1: Top Inventors
@@ -284,9 +280,8 @@ LIMIT 20
 ranking_results = conn.execute(q7).fetchdf()
 print(ranking_results.to_string(index=False))
 
-# -----------------------------------------------------------------------------
+
 # CREATING REPORTS
-# -----------------------------------------------------------------------------
 print("\n[5/7] Creating reports...")
 
 # Get total patents
@@ -366,9 +361,9 @@ if len(top_companies) > 0:
 if len(top_countries) > 0:
     print(f"Top Country: {top_countries.iloc[0]['country']} - {top_countries.iloc[0]['patent_count']:,} patents")
 
-# -----------------------------------------------------------------------------
+
 # CREATING schema.sql FILE WITH TABLE DEFINITIONS AND QUERIES
-# -----------------------------------------------------------------------------
+
 print("\n[6/7] Creating schema.sql...")
 
 schema_sql = """-- Patent Data Pipeline Database Schema
@@ -519,9 +514,8 @@ with open(os.path.join(DATABASE_DIR, "schema.sql"), "w") as f:
     f.write(schema_sql)
 print(" Saved: database/schema.sql")
 
-# -----------------------------------------------------------------------------
+
 # DATABASE SIZE INFO
-# -----------------------------------------------------------------------------
 print("\n[7/7] Getting database information...")
 
 # Get database file size

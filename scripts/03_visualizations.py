@@ -32,9 +32,8 @@ print(" CREATING DATA VISUALIZATIONS")
 print("\n[1/6] Connecting to database...")
 conn = duckdb.connect(DB_PATH)
 
-# -----------------------------------------------------------------------------
+
 # Visualization 1: Top 10 Inventors (Bar Chart)
-# -----------------------------------------------------------------------------
 print("\n[2/6] Creating Top 10 Inventors chart...")
 
 q1 = """
@@ -65,9 +64,8 @@ plt.savefig(os.path.join(VISUALS_DIR, 'top_inventors.png'), dpi=150, bbox_inches
 plt.close()
 print(f"      Saved: visuals/top_inventors.png")
 
-# -----------------------------------------------------------------------------
+
 # Visualization 2: Top 10 Companies (Bar Chart)
-# -----------------------------------------------------------------------------
 print("\n[3/6] Creating Top 10 Companies chart...")
 
 q2 = """
@@ -98,9 +96,8 @@ plt.savefig(os.path.join(VISUALS_DIR, 'top_companies.png'), dpi=150, bbox_inches
 plt.close()
 print(f"      Saved: visuals/top_companies.png")
 
-# -----------------------------------------------------------------------------
+
 # Visualization 3: Top 10 Countries (Bar Chart)
-# -----------------------------------------------------------------------------
 print("\n[4/6] Creating Top 10 Countries chart...")
 
 q3 = """
@@ -133,9 +130,8 @@ plt.savefig(os.path.join(VISUALS_DIR, 'top_countries.png'), dpi=150, bbox_inches
 plt.close()
 print(f"      Saved: visuals/top_countries.png")
 
-# -----------------------------------------------------------------------------
+
 # Visualization 4: Patent Trends Over Time (Line Chart)
-# -----------------------------------------------------------------------------
 print("\n[5/6] Creating Patent Trends chart...")
 
 q4 = """
@@ -172,9 +168,8 @@ plt.savefig(os.path.join(VISUALS_DIR, 'patent_trends.png'), dpi=150, bbox_inches
 plt.close()
 print(f"      Saved: visuals/patent_trends.png")
 
-# -----------------------------------------------------------------------------
+
 # Visualization 5: Top Countries Pie Chart
-# -----------------------------------------------------------------------------
 print("\n[6/6] Creating Top Countries Pie Chart...")
 
 # Get top 8 countries, group others as "Other"
@@ -196,9 +191,8 @@ plt.savefig(os.path.join(VISUALS_DIR, 'countries_pie.png'), dpi=150, bbox_inches
 plt.close()
 print(f"      Saved: visuals/countries_pie.png")
 
-# -----------------------------------------------------------------------------
+
 #  Combined Dashboard (Multiple charts in one figure)
-# -----------------------------------------------------------------------------
 print("\n Creating Combined Dashboard...")
 
 fig, axes = plt.subplots(2, 2, figsize=(14, 12))
@@ -253,9 +247,4 @@ conn.close()
 
 print(" ALL VISUALIZATIONS CREATED SUCCESSFULLY!")
 print("\n Visualizations saved in: reports/visuals/")
-print("    top_inventors.png")
-print("    top_companies.png")
-print("    top_countries.png")
-print("    patent_trends.png")
-print("    countries_pie.png")
-print("    dashboard.png")
+

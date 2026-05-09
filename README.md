@@ -16,7 +16,9 @@ This project builds a complete data pipeline that collects, cleans, stores, and 
 ## Links
 
 Dashboard Demo (YouTube)   https://youtu.be/aRhJW2zsjyw 
+
 GitHub Repository          https://github.com/NamatovuChristineMaria123/patent-data-pipeline 
+
 Data Source                https://data.uspto.gov/bulkdata/datasets/pvgpatdis 
 
 ---
@@ -110,14 +112,15 @@ streamlit run scripts/04_streamlit_dashboard.py
 
 ## 🖥️ Console Report
 
-> <img width="826" height="620" alt="image" src="https://github.com/user-attachments/assets/14f89f6b-2841-42c8-8924-426a005649ed" />
-> <img width="973" height="510" alt="image" src="https://github.com/user-attachments/assets/728a8c3d-e49f-4f0e-9fda-18a60f8be832" />
-<img width="1089" height="461" alt="image" src="https://github.com/user-attachments/assets/cf12aa74-628b-48b2-b828-82ec5388110b" />
-<img width="984" height="879" alt="image" src="https://github.com/user-attachments/assets/780f0eed-838f-4d29-bee2-aa69b6e67e14" />
-<img width="1089" height="797" alt="image" src="https://github.com/user-attachments/assets/0a399458-0d79-4a2f-841d-c9f64fb7ad0b" />
-<img width="1185" height="756" alt="image" src="https://github.com/user-attachments/assets/fddbd645-eaf8-46d3-b193-9124cb00543b" />
-<img width="1059" height="417" alt="image" src="https://github.com/user-attachments/assets/47789ede-86e5-4052-8202-716ed542781e" />
-<img width="1031" height="696" alt="image" src="https://github.com/user-attachments/assets/7b3efe74-b290-414f-9fb8-bd1bfc76a503" />
+<img width="826" height="620" alt="image" src="https://github.com/user-attachments/assets/14f89f6b-2841-42c8-8924-426a005649ed" />
+<img width="1021" height="415" alt="image" src="https://github.com/user-attachments/assets/94154a39-491b-48e9-ae48-99367abbd611" />
+<img width="999" height="430" alt="image" src="https://github.com/user-attachments/assets/b9cd3f01-5fab-4672-a1f1-43069132b216" />
+<img width="1059" height="829" alt="image" src="https://github.com/user-attachments/assets/35ea7c55-684b-4c90-88b9-cee4648edce3" />
+<img width="1065" height="736" alt="image" src="https://github.com/user-attachments/assets/f843b755-fa39-4138-ab03-1597a4b7dc87" />
+<img width="1183" height="720" alt="image" src="https://github.com/user-attachments/assets/a3f6f4c9-7e42-4860-ba62-76b171674216" />
+<img width="887" height="426" alt="image" src="https://github.com/user-attachments/assets/59e00c45-54b3-40c3-94e3-33474347f4b2" />
+<img width="985" height="702" alt="image" src="https://github.com/user-attachments/assets/532220f2-12dd-4fb4-8f64-aafc11653e57" />
+
 
 ## REPORT.JSON
 <img width="708" height="755" alt="image" src="https://github.com/user-attachments/assets/2b59e84d-93e9-411a-b0d5-74a8ecc422e3" />
@@ -164,14 +167,14 @@ patent-data-pipeline/
 ## 🔍 SQL Queries Implemented
 
 | Query  | Description 
-|--------|
-| **Q1** | Top Inventors — who has the most patents 
-| **Q2** | Top Companies — which companies own the most patents 
-| **Q3** | Top Countries — which countries produce the most patents 
-| **Q4** | Trends Over Time — patents granted per year 
-| **Q5** | JOIN Query — combine patents with inventors and companies 
-| **Q6** | CTE Query — top inventor each year using `WITH` statement 
-| **Q7** | Ranking Query — rank inventors using window functions 
+|--------|-----------------------------------------------------------|
+| **Q1** | Top Inventors — who has the most patents                  |
+| **Q2** | Top Companies — which companies own the most patents      |
+| **Q3** | Top Countries — which countries produce the most patents  |
+| **Q4** | Trends Over Time — patents granted per year               |
+| **Q5** | JOIN Query — combine patents with inventors and companies |
+| **Q6** | CTE Query — top inventor each year using `WITH` statement |
+| **Q7** | Ranking Query — rank inventors using window functions     |
 
 ---
 

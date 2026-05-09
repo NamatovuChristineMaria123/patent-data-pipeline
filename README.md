@@ -123,9 +123,10 @@ streamlit run scripts/04_streamlit_dashboard.py
 
 
 ## REPORT.JSON
-<img width="708" height="755" alt="image" src="https://github.com/user-attachments/assets/2b59e84d-93e9-411a-b0d5-74a8ecc422e3" />
-<img width="941" height="844" alt="image" src="https://github.com/user-attachments/assets/1ec175f6-c065-471d-8ca9-4c7c1ab47868" />
-<img width="1033" height="722" alt="image" src="https://github.com/user-attachments/assets/fa5d8da2-885b-4539-88d9-71a943256cc7" />
+<img width="1028" height="742" alt="image" src="https://github.com/user-attachments/assets/9864daba-f89f-4147-a92a-26ff9d6c4117" />
+<img width="1056" height="630" alt="image" src="https://github.com/user-attachments/assets/69e57435-294f-4e05-a3c9-cd71753f66e6" />
+<img width="1181" height="692" alt="image" src="https://github.com/user-attachments/assets/68c2c7db-f63d-44ea-badb-7ae10d4dea0f" />
+
 
 ---
 
@@ -139,15 +140,19 @@ patent-data-pipeline/
 │   └── clean/
 │       ├── clean_patents.csv
 │       ├── clean_inventors.csv
+|       ├── relationships.csv
 │       └── clean_companies.csv
+|
 │
 ├── scripts/
+|   ├── 00_download_data            #For reproducibility incase one doesnt want to download the big datasets manually(Downloads part of the data)
 │   ├── 01_load_and_clean.py        # Data ingestion & cleaning
 │   ├── 02_duckdb_queries.py        # SQL analytics via DuckDB
 │   ├── 03_visualizations.py        # Chart generation
 │   └── 04_streamlit_dashboard.py   # Interactive dashboard
 │
-├── sql/
+├── database/
+|   ├── patent_data.duckdb
 │   └── schema.sql                  # Database schema
 │
 ├── reports/
@@ -159,6 +164,7 @@ patent-data-pipeline/
 │   └── visuals/                    # 6 PNG visualizations
 │
 ├── requirements.txt
+├── gitignore
 └── README.md
 ```
 

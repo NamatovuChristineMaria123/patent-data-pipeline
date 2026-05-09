@@ -7,6 +7,10 @@ This project builds a complete data pipeline that collects, cleans, stores, and 
 ## Links
 
 Presented by Namatovu Christine Maria 23/U/1098
+
+> **Video Walkthrough:** Since the app isn't publicly deployed, I had recorded a dashboard demo and uploaded on YouTube:
+> **[▶️ Watch Dashboard Demo on YouTube](https://youtu.be/aRhJW2zsjyw)**
+
 Dashboard Demo (YouTube) https://youtu.be/aRhJW2zsjyw
 
 GitHub Repository https://github.com/NamatovuChristineMaria123/patent-data-pipeline

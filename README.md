@@ -61,16 +61,13 @@ streamlit run scripts/04_streamlit_dashboard.py
 
 ---
 
-## 📊 Dashboard
+## 📊 DASHBOARD (Patent trends 1976-2025)
 
 >  **Video Walkthrough:** Since the app isn't publicly deployed, I had recorded a dashboard demo and uploaded on YouTube:
 > **[▶️ Watch Dashboard Demo on YouTube](https://youtu.be/aRhJW2zsjyw)**
 
 ### Dashboard Screenshot(For all countries between 1976 - 2025
 > <img width="1894" height="863" alt="image" src="https://github.com/user-attachments/assets/3a0a1f58-2c0e-4ac7-9adb-3b999b164a3d" />
-
-### Dashboard Screenshot(For a single country (JP) in a specific year (2003)
-<img width="1890" height="874" alt="image" src="https://github.com/user-attachments/assets/5f103615-0b60-472e-a55d-638adca17aa9" />
 
 ### Dashboard – Patent Trends View
 > <img width="1887" height="860" alt="image" src="https://github.com/user-attachments/assets/d97e4f5b-df77-4fae-bf04-e87342e99f61" />
@@ -79,12 +76,17 @@ streamlit run scripts/04_streamlit_dashboard.py
 
 > <img width="1906" height="873" alt="image" src="https://github.com/user-attachments/assets/ba43f964-4733-407b-a9fa-bfbcc931ab43" />
 
-### Dashboard – Heatmap
-> <img width="1889" height="873" alt="image" src="https://github.com/user-attachments/assets/57d57b73-6a1d-4e73-9801-ed5561899881" />
-
-### Dashboard – Filters 
+### DASHBOARD – FILTERS 
 ><img width="1857" height="867" alt="image" src="https://github.com/user-attachments/assets/1d63e42f-4b40-4d4b-af95-24474ddca691" />
 
+### Dashboard Screenshot(For a single country (JP) in a specific year (2003)
+<img width="1890" height="874" alt="image" src="https://github.com/user-attachments/assets/5f103615-0b60-472e-a55d-638adca17aa9" />
+
+### Dashboard Screenshot(2003 Patent Trends for all countries)
+<img width="1896" height="854" alt="dashboard_05_(filtered)2003_patent_trends" src="https://github.com/user-attachments/assets/2a60d8c1-5087-4740-b50b-c82cb0f3cc3a" />
+
+### Dashboard – Heatmap(2015-2025)
+> <img width="1889" height="873" alt="image" src="https://github.com/user-attachments/assets/57d57b73-6a1d-4e73-9801-ed5561899881" />
 
 ---
 
